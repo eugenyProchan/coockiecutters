@@ -1,4 +1,4 @@
-.PHONY: install init lint black test dd
+.PHONY: install init lint black test
 
 GLOBAL_PYTHON_INTERPRETER={{ cookiecutter.python_interpreter }}
 VENV_PYTHON_INTERPRETER=$(CURDIR)/.venv/bin/python
