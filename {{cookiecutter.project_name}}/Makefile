@@ -1,14 +1,14 @@
-.PHONY: install init lint black test
+.PHONY: install init lint black tests
 
 GLOBAL_PYTHON_INTERPRETER={{ cookiecutter.python_interpreter }}
 VENV_PYTHON_INTERPRETER=$(CURDIR)/.venv/bin/python
 
 install:
-	@echo "$(package_name)" >> requirements.txt
+	@echo "$(pn)" >> requirements.txt
 	${VENV_PYTHON_INTERPRETER} -m pip install -r requirements.txt
 
 install-dev:
-	@echo "$(package_name)" >> requirements-dev.txt
+	@echo "$(pn)" >> requirements-dev.txt
 	${VENV_PYTHON_INTERPRETER} -m pip install -r requirements-dev.txt
 
 init:
